@@ -30,34 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		const hatAnchor = mindarThree.addAnchor(0);
 		hatAnchor.group.add(hat.scene);
 		
-		hatAnchor.onTargetFound = () => {
-			hatAudio.pause();
-		}
-		
-		hatAnchor.onTargetLost = () => {
-			hatAudio.play();
-		
 		const iglooAnchor = mindarThree.addAnchor(1);
 		iglooAnchor.group.add(igloo.scene);
 		
-		
-		iglooAnchor.onTargetFound = () => {
-			iglooAudio.pause();
-		}
-		
-		iglooAnchor.onTargetLost = () => {
-			iglooAudio.play();
-		
 		const jellyAnchor = mindarThree.addAnchor(2);
 		jellyAnchor.group.add(jelly.scene);
-		
-		
-		jellyAnchor.onTargetFound = () => {
-			jellyAudio.pause();
-		}
-		
-		jellyAnchor.onTargetLost = () => {
-			jellyAudio.play();
 		
 		
 		await mindarThree.start();
